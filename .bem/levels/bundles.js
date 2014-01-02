@@ -17,6 +17,7 @@ exports.getTechs = function() {
         'browser.js'         : join(BEMCORE_TECHS, 'browser.js.js'),
         'browser.js+bemhtml' : join(BEMCORE_TECHS, 'browser.js+bemhtml.js'),
         'css'                : 'v2/css',
+        'less'               : join(PRJ_TECHS, 'less.js'),
         'ie.css'             : 'v2/ie.css',
         'ie6.css'            : 'v2/ie6.css',
         'ie7.css'            : 'v2/ie7.css',

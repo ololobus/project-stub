@@ -30,11 +30,14 @@ MAKE.decl('BundleNode', {
             'deps.js',
             'bemhtml',
             'browser.js+bemhtml',
-            'css',
-            'ie.css',
+            'less',
             'html'
         ];
 
+    },
+
+    'create-less-optimizer-node': function(tech, sourceNode, bundleNode) {
+        return this['create-css-optimizer-node'].apply(this, arguments);
     },
 
     'create-browser.js+bemhtml-optimizer-node': function(tech, sourceNode, bundleNode) {
