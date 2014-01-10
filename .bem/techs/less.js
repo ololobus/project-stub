@@ -1,4 +1,4 @@
-var BORSCHIK_CSS_TECH = require('borschik/lib/techs/css'),
+var BORSCHIK_CSS_TECH = require('bem/node_modules/borschik/lib/techs/css'),
     BEM = require('bem'),
     Q = BEM.require('q'),
     LESS = require('less');
@@ -23,6 +23,11 @@ exports.techMixin = {
 
     processBuildResult : function(res) {
         var defer = Q.defer();
+
+        if (!res) {
+            defer.resolve([]);
+            return defer.promise;
+        }
 
         LESS.render(res, function(err, css) {
             if (err) return defer.reject(err);
