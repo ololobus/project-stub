@@ -1,0 +1,16 @@
+{
+  "name": "project-stub",
+  "version": "0.0.1",
+  "icon": "",
+  "ignore": [
+    ".bem/cache",
+    "node_modules",
+    "lib",
+    "libs",
+    "examples.blocks"
+  ],
+  "devDependencies": {
+    "bem-bl": "git://github.com/ololobus/bem-bl.git#m.nc",
+    "bem-components": "git@github.com:bem/bem-components.git#v1"
+  }
+}
