@@ -1,32 +1,49 @@
 ({
-    block: 'b-page',
-    title: 'Title of the page',
+    title: 'The page for a scopes testing',
     favicon: '/favicon.ico',
-    head: [
-        { elem: 'css', url: '_index.css', ie: false },
-        { elem: 'css', url: '_index.ie.css', ie: 'gte IE 6' },
-        { elem: 'meta', attrs: { name: 'description', content: '' }}
-    ],
     content:[
         {
-            block: 'header',
+            block: 'scope',
+            attrs: { id: 'bem-scopedapp' },
+            mix: [
+                { block: 'bem-scopedapp' },
+                {
+                    block: 'b-page',
+                    mods: {
+                        ajax: 'yes',
+                    }
+                }
+            ],
             content: [
-                'header content goes here'
+                {
+                    block: 'header',
+                    content: [
+                        { block: 'b-page', elem: 'css', url: 'index/_index.css', ie: false },
+                        { block: 'b-page', elem: 'css', url: 'index/_index.ie.css', ie: 'gte IE 6' },
+                        { block: 'b-page', elem: 'meta', attrs: { name: 'description', content: '' } },
+                        'header content goes here'
+                    ]
+                },
+                {
+                    block: 'content',
+                    content: [
+                        {
+                            block: 'b-link',
+                            content: 'link',
+                            js: {},
+                            url: 'javascript:void(0);'
+                        }
+                    ]
+                },
+                {
+                    block: 'footer',
+                    content: [
+                        'footer content goes here'
+                    ]
+                },
+                { block: 'i-jquery', mods: { version: '1.8.3' } },
+                { block: 'b-page', elem: 'js', url: 'index/_index.js' }
             ]
-        },
-        {
-            block: 'content',
-            content: [
-                'main content'
-            ]
-        },
-        {
-            block: 'footer',
-            content: [
-                'footer content goes here'
-            ]
-        },
-        { block: 'i-jquery', mods: { version: '1.8.3' } },
-        { elem: 'js', url: '_index.js' }
+        }
     ]
 })

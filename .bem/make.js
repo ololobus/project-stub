@@ -12,11 +12,6 @@ MAKE.decl('Arch', {
     blocksLevelsRegexp: /^.+?\.blocks/,
     bundlesLevelsRegexp: /^.+?\.bundles$/,
 
-    libraries: [
-        'bem-bl @ m.nc',
-        'bem-components @ v1'
-    ]
-
 });
 
 

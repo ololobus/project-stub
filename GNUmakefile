@@ -1,6 +1,6 @@
 .DEFAULT_GOAL :=
 
-export BEM_CONFLICTS_NO = scope1
+export BEM_CONFLICTS_NO = scopedapp
 
 NODE_MODULES := ./node_modules/
 
