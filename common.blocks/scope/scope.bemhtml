@@ -1,0 +1,18 @@
+block scope {
+
+    mix: {
+
+        var _this = this['i-global'],
+            js = {},
+            block = { block: 'i-global', js: js }, e;
+
+        // (NOTE): наполняем параметры передаваемые в JS
+        local(this._mode = 'public-params', this.block = 'i-global') {
+            for(e in _this) if(_this.hasOwnProperty(e) && apply(this.elem = e)) js[e] = _this[e];
+        }
+
+        return [block];
+
+    }
+
+}

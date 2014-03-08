@@ -1,6 +1,8 @@
 ({
+    block: 'b-page',
     title: 'The page for a scopes testing',
     favicon: '/favicon.ico',
+    ololo: { block: 'i-bem', elem: 'dom', elemMods: { conflicts: 'no' } },
     content:[
         {
             block: 'scope',
@@ -10,7 +12,7 @@
                 {
                     block: 'b-page',
                     mods: {
-                        ajax: 'yes',
+                        ajax: 'yes'
                     }
                 }
             ],

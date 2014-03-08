@@ -1,0 +1,2 @@
+// запрещаем дефолтный микс i-global
+block b-page, this._mode === 'js-params': { return {} }

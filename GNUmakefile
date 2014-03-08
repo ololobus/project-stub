@@ -1,12 +1,12 @@
 .DEFAULT_GOAL :=
 
-export BEM_CONFLICTS_NO = scopedapp
-
 NODE_MODULES := ./node_modules/
 
 BEM := $(NODE_MODULES).bin/bem
 BOWER := $(NODE_MODULES).bin/bower
 NPM := npm
+
+export BEM_CONFLICTS_NO = scopedapp
 
 ifneq (,$(findstring B,$(MAKEFLAGS)))
 	BEM_FLAGS := --force
@@ -18,6 +18,7 @@ all:: $(BEM) server
 	$(if $(findstring GNUmakefile,$@),,$(BEM) make $@ $(BEM_FLAGS))
 
 .PHONY: server
+
 server:: $(BEM) libs
 	@$(BEM) server
 
