@@ -24,11 +24,17 @@
             block: 'content',
             content: [
                 {
-                    block: 'b-link',
-                    content: 'initial scope link',
-                    url: 'javascript:void(0);',
-                    mix: [
-                        { block: 'test-link', elem: 'initial-scope' }
+                    block: 'test-link',
+                    js: true,
+                    content: [
+                        {
+                            block: 'b-link',
+                            content: 'loaded scope link',
+                            url: 'javascript:void(0);',
+                            mix: [
+                                { block: 'test-link', elem: 'initial-scope' }
+                            ]
+                        }
                     ]
                 }
             ]
