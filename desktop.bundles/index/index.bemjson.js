@@ -2,7 +2,7 @@
     block: 'b-page',
     title: 'The page for a scopes testing',
     favicon: '/favicon.ico',
-    ololo: { block: 'i-bem', elem: 'dom', elemMods: { conflicts: 'no' } },
+    // ololo: { block: 'i-bem', elem: 'dom', elemMods: { conflicts: 'no' } },
     content:[
         {
             block: 'scope',
@@ -23,7 +23,7 @@
                         { block: 'b-page', elem: 'css', url: 'index/_index.css', ie: false },
                         { block: 'b-page', elem: 'css', url: 'index/_index.ie.css', ie: 'gte IE 6' },
                         { block: 'b-page', elem: 'meta', attrs: { name: 'description', content: '' } },
-                        'header content goes here'
+                        'header content goes hereeee'
                     ]
                 },
                 {

@@ -10,15 +10,15 @@ exports.getTechs = function() {
 
     return {
         'bemjson.js'    : join(PRJ_TECHS, 'bemjson.js'),
-        'bemdecl.js'    : 'bemdecl.js',
-        'deps.js'       : 'deps.js',
-        'js'            : 'js',
-        'css'           : 'css',
-        'ie.css'        : 'ie.css',
-        'ie6.css'       : 'ie6.css',
-        'ie7.css'       : 'ie7.css',
-        'ie8.css'       : 'ie8.css',
-        'ie9.css'       : 'ie9.css',
+        'bemdecl.js'    : 'v2/bemdecl.js',
+        'deps.js'       : 'v2/deps.js',
+        'js'            : join(BEMBL_TECHS, 'js'),
+        'css'           : 'v2/css',
+        'ie.css'        : 'v2/ie.css',
+        'ie6.css'       : 'v2/ie6.css',
+        'ie7.css'       : 'v2/ie7.css',
+        'ie8.css'       : 'v2/ie8.css',
+        'ie9.css'       : 'v2/ie9.css',
 
         'bemhtml'       : join(BEMBL_TECHS, 'bemhtml.js'),
         'html'          : join(BEMBL_TECHS, 'html.js')
@@ -62,4 +62,3 @@ exports.defaultTechs = ['bemjson.js'];
 // 
 // // Create bundles in bemjson.js tech
 // exports.defaultTechs = ['bemjson.js'];
-// 
