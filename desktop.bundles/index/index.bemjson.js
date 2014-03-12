@@ -23,24 +23,41 @@
                         { block: 'b-page', elem: 'css', url: 'index/_index.css', ie: false },
                         { block: 'b-page', elem: 'css', url: 'index/_index.ie.css', ie: 'gte IE 6' },
                         { block: 'b-page', elem: 'meta', attrs: { name: 'description', content: '' } },
-                        'header content goes hereeee'
+                        'initial scope header content goes hereeee'
                     ]
                 },
                 {
                     block: 'content',
                     content: [
                         {
-                            block: 'b-link',
-                            content: 'link',
-                            js: {},
-                            url: 'javascript:void(0);'
+                            block: 'test-link',
+                            js: true,
+                            content: [
+                                {
+                                    block: 'b-link',
+                                    content: 'initial scope link',
+                                    url: 'javascript:void(0);',
+                                    mix: [
+                                        { block: 'test-link', elem: 'initial-scope' }
+                                    ]
+                                },
+                                '<br>',
+                                {
+                                    block: 'b-link',
+                                    content: 'load another scope',
+                                    url: 'javascript:void(0);',
+                                    mix: [
+                                        { block: 'test-link', elem: 'load-scope' }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     block: 'footer',
                     content: [
-                        'footer content goes here'
+                        'initial scope footer content goes here'
                     ]
                 },
                 { block: 'i-jquery', mods: { version: '1.8.3' } },
